@@ -1,0 +1,72 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'angular_mock',
+1 verbose cli   '--save' ]
+2 info using npm@1.4.28
+3 info using node@v6.6.0
+4 verbose cache add [ 'angular_mock', null ]
+5 verbose cache add name=undefined spec="angular_mock" args=["angular_mock",null]
+6 verbose parsed url Url {
+6 verbose parsed url   protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'angular_mock',
+6 verbose parsed url   path: 'angular_mock',
+6 verbose parsed url   href: 'angular_mock' }
+7 silly lockFile e03c4ee4-angular-mock angular_mock
+8 verbose lock angular_mock C:\adwin\e03c4ee4-angular-mock.lock
+9 silly lockFile e03c4ee4-angular-mock angular_mock
+10 silly lockFile e03c4ee4-angular-mock angular_mock
+11 verbose addNamed [ 'angular_mock', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 747a5799-angular-mock angular_mock@
+14 verbose lock angular_mock@ C:\adwin\747a5799-angular-mock.lock
+15 silly addNameRange { name: 'angular_mock', range: '*', hasData: false }
+16 verbose request where is /angular_mock
+17 verbose request registry http://registry.npmjs.org/
+18 verbose request id dd7733d3d10dcc7b
+19 verbose url raw /angular_mock
+20 verbose url resolving [ 'http://registry.npmjs.org/', './angular_mock' ]
+21 verbose url resolved http://registry.npmjs.org/angular_mock
+22 verbose request where is http://registry.npmjs.org/angular_mock
+23 info trying registry request attempt 1 at 6:03:16 PM
+24 http GET http://registry.npmjs.org/angular_mock
+25 http 404 http://registry.npmjs.org/angular_mock
+26 silly registry.get cb [ 404,
+26 silly registry.get   { 'content-type': 'application/json',
+26 silly registry.get     'cache-control': 'max-age=0',
+26 silly registry.get     'accept-ranges': 'bytes',
+26 silly registry.get     date: 'Thu, 13 Oct 2016 12:33:16 GMT',
+26 silly registry.get     via: '1.1 varnish, 1.1 CTSINKOCVWCGB',
+26 silly registry.get     age: '2',
+26 silly registry.get     'x-served-by': 'cache-sin6920-SIN',
+26 silly registry.get     'x-cache': 'MISS',
+26 silly registry.get     'x-cache-hits': '0',
+26 silly registry.get     'x-timer': 'S1476361996.533987,VS0,VE237',
+26 silly registry.get     vary: 'Accept-Encoding',
+26 silly registry.get     'content-length': '2',
+26 silly registry.get     connection: 'close' } ]
+27 silly lockFile 747a5799-angular-mock angular_mock@
+28 silly lockFile 747a5799-angular-mock angular_mock@
+29 error 404 Not Found
+29 error 404
+29 error 404 'angular_mock' is not in the npm registry.
+29 error 404 You should bug the author to publish it
+29 error 404
+29 error 404 Note that you can also install from a
+29 error 404 tarball, folder, or http url, or git url.
+30 error System Windows_NT 6.1.7601
+31 error command "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "angular_mock" "--save"
+32 error cwd C:\Users\548745\Documents\assignment anup
+33 error node -v v6.6.0
+34 error npm -v 1.4.28
+35 error code E404
+36 verbose exit [ 1, true ]

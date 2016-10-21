@@ -1,0 +1,59 @@
+
+	<section class="wrapper col-xs-12" ng-controller="MyCtrl1">
+<header class="col-xs-12">
+    <h1>My ToDo Application</h1>
+    <p class="add" ng-show="addbutton" ><span>Click here to add >></span><img src="assets/images/icon1.png" width="50" height="50" ng-click="addoption()"></p>
+    <p class="clear"></p>
+</header>
+<section class="input col-xs-12" ng-show="addinginput">
+  <section class="col-xs-12">
+    <span class="col-xs-2">Task id:</span>
+    <input type="textbox" name="taskid" class="taskid col-xs-9" ng-model="newtaskid">
+  </section>
+  <section class="col-xs-12" >
+    <span class="col-xs-2">Task Name :</span>
+    <input type="textbox" name="taskname" class="taskname col-xs-9" ng-model="newtaskname">
+    <section class="taskadding" ng-hide="child">
+    <span class="taskadd" ng-click="nextcont()" ng-show="next">NEXT</span>
+    <span class="taskadd" ng-click="canceloption()">CANCEL</span>
+    </section>
+  </section>
+  <section  ng-show="child" ng-controller="MyCtrl11">
+  <section class="col-xs-12" style="padding:0px">
+    <span class="col-xs-2">Taskdetails:</span>
+    <input type="textbox" name="taskname" class="taskname col-xs-9" ng-model="newtaskdetails">
+  </section>
+  <section class="col-xs-12" style="padding-left:0px">
+    <span class="col-xs-2">Endtime:</span>
+    <input type="time" name="taskname" class="tasktime endtime col-xs-9" ng-model="newtasktime">
+  </section>
+  <section class="taskadding">
+    <span class="taskadd" ng-click="addtask()" ng-hide="next">ADD</span>
+    <span class="taskadd" ng-click="canceloption()" ng-hide="next">CANCEL</span>
+  </section>
+  </section>
+</section>
+<p class="search" ng-show="addbutton">Search :<input type="textbox" name="search" ng-model="search"></p>
+<section>
+   <table>
+       <tr>
+           <td>#</td>
+           <td>Task Id</td>
+           <td>Task name</td>
+           <td>Mark Completed</td>
+           <td>Remove Task</td>
+           <td>Description</td>
+       </tr> 
+       <tr ng-repeat="x in task  | filter:search:strict" ng-class="{colored:checkbox}">
+           <td>{{$index+1}}</td>
+           <td>{{x.taskid}}</td>
+           <td>{{x.taskname}}</td>
+           <td><input type="checkbox" name={{x.taskname}} ng-model="checkbox" class="checkbox"></td>
+           <td  class="remove"><span ng-click="remove(x.taskid)">REMOVE</span></td>
+           <td class="view" ><button ng-click="view(x.taskid)">
+           	 view
+           </button></td>
+       </tr>
+   </table>
+   </section>
+   </section>

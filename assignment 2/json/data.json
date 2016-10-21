@@ -1,0 +1,11 @@
+[            { "taskname":"Cleaning",
+              "taskid":"101",
+                "taskdetails":"Actions Cleaning,of a house when housekeeping Washing Cleaning, work done by a cleaner, or some of the work done by a: Housekeeper (domestic worker) Maid Domestic worker Janitor Dry cleaning Data cleaning or data cleansing",
+                 "endtime":"4:00 pm"
+           },
+              { "taskname":"Gardening",
+              	"taskid":"102",
+          		 "taskdetails":"Gardening is the practice of growing and cultivating plants as part of horticulture. In gardens, ornamental plants are often grown for their flowers, foliage, or overall appearance; useful plants, such as root vegetables, leaf vegetables, fruits, and herbs, are grown for consumption, for use as dyes, or for medicinal or cosmetic use. Gardening is considered to be a relaxing activity for many people",
+                 "endtime":"5:00 pm"
+        }
+]

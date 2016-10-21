@@ -1,0 +1,12 @@
+
+	<section class="wrapper col-xs-12" ng-controller="home">
+  <h1>GAMES of INDIA</h1>
+  <section class="img1"><img src="{{img1}}" height="300" width="400"></section>
+<section class="img2"><img src="{{img2}}" height="300" width="400"></section>
+     <ul>
+      <li ng-repeat="game in games" ng-click="passdetails(game.Gameid)" ng-mouseover="img(game.Gameid)"><span><a ui-sref="Details">
+                     {{game.Gamename}}
+                     </a></span>
+      </li> 
+     </ul>
+   </section>

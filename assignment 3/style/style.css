@@ -1,0 +1,89 @@
+.clear{
+	clear: both;
+}
+header h1{
+text-align: center;
+font-size: 40px;
+margin: 40px 0px 40px 0px;
+color: #3a3839;
+}
+.add{
+	float: right;
+	color: #07a4f5;
+	padding: 0px 7% 20px 0px;
+	cursor: pointer;
+}
+.input span{
+	font-size: 25px;
+}
+.input section{
+	padding: 1% 0px;
+	padding-left: 6%;
+}
+.taskid{
+	width: 80%;
+	line-height: 2%;
+	padding: 1%;
+	border-radius: 5px;
+}
+.taskname{
+	width: 80%;
+	line-height: 2%;
+	padding: 1%;
+	border-radius: 5px;
+}
+.taskadding{
+	padding:2% 0px;
+	margin-bottom: 4%;
+}
+.taskadd{
+	font-size: 20px !important;
+	padding: 1%;
+	margin-left: 30% ;
+	background-color: #07a4f5;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+}
+table {
+	margin: 0 auto;
+    border-collapse: collapse;
+    width: 90%;
+    text-align: center;
+    color: #3a3839;
+}
+ td {
+    border: 1px solid black;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bolder;
+    vertical-align: middle;
+}
+.remove span{
+	color: #07a4f5;
+	cursor: pointer;
+	font-size: 15px !important;
+}
+.colored{
+	background-color: lightgrey;
+}
+@media screen and (max-width: 767px) {
+
+.input span{
+	font-size: 13px;
+}
+.taskadd{
+	font-size: 15px !important;
+}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+
+.input span{
+	font-size: 20px;
+}
+.taskadd{
+	font-size: 15px !important;
+}
+}
+@media (min-width: 992px) and (max-width: 1199px) {}
+@media screen and (min-width: 1200px) {}

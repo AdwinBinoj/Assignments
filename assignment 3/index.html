@@ -1,0 +1,108 @@
+
+<!DOCTYPE HTML >
+<html>
+
+<head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-B">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/reset.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+
+<body ng-app="myapp">
+<section class="wrapper col-xs-12" ng-controller="MyCtrl1">
+<header class="col-xs-12">
+    <h1>My ToDo Application</h1>
+    <p class="add" ng-show="addbutton" ng-click="addoption()">Add</p>
+    <p class="clear"></p>
+</header>
+<section class="input col-xs-12" ng-show="addinginput">
+  <section class="col-xs-12">
+    <span class="col-xs-2">Task id:</span>
+    <input type="textbox" name="taskid" class="taskid col-xs-9" ng-model="newtaskid">
+  </section>
+  <section class="col-xs-12" >
+    <span class="col-xs-2">Task Name :</span>
+    <input type="textbox" name="taskname" class="taskname col-xs-9" ng-model="newtaskname">
+  </section>
+  <section class="taskadding">
+    <span class="taskadd" ng-click="addtask()">ADD</span>
+    <span class="taskadd" ng-click="canceloption()">CANCEL</span>
+  </section>
+</section>
+   <table>
+       <tr>
+           <td>#</td>
+           <td>Task Id</td>
+           <td>Task name</td>
+           <td>Mark Completed</td>
+           <td>Remove Task</td>
+       </tr> 
+       <tr ng-repeat="x in task" ng-class="{colored:checkbox}">
+           <td>{{$index+1}}</td>
+           <td>{{x.taskid}}</td>
+           <td>{{x.taskname}}</td>
+           <td><input type="checkbox" name={{x.taskname}} ng-model="checkbox"></td>
+           <td  class="remove"><span ng-click="remove(x.taskid)">REMOVE</span></td>
+       </tr>
+   </table>
+   </section>
+   <script src="lib/angular/angular.min.js"></script>
+   <script type="text/javascript">
+     var App = angular.module('myapp', []);
+//controllerstarts
+App.controller("MyCtrl1",function($rootScope,$scope){
+$scope.task=[{taskname:"Task1",
+              taskid:"101"},
+              {taskname:"Task2",
+              taskid:"102"}]
+ $scope.addinginput="false";
+ $scope.addbutton="true";
+ $scope.addoption=function(){
+ $scope.addinginput="true";
+ $scope.addbutton="false";
+ }
+ $scope.canceloption=function(){
+ $scope.addinginput="false";
+ $scope.addbutton="true";
+ }
+ $scope.addtask=function(){
+  $scope.count=0;
+  for (var i = 0; i < $scope.task.length; i++) {
+    if($scope.task[i].taskid == $scope.newtaskid){
+      $scope.count=1;
+    }
+  }
+  if ($scope.count!=1) {
+    if ($scope.newtaskid == undefined || $scope.newtaskname == undefined) {
+      alert("Id column or name column is empty");
+    }
+    else{
+      if ( isNaN($scope.newtaskid)) {
+        alert("id should be only in numbers")
+      }
+      else{
+    $scope.newtask={taskname:$scope.newtaskname,
+              taskid:$scope.newtaskid};
+              $scope.task.push($scope.newtask);
+            }
+            }
+  }
+  else{
+    alert("it is already in the list")
+  }
+ }
+ $scope.remove=function(enteredid){
+    for (var i = 0; i < $scope.task.length; i++) {
+      if($scope.task[i].taskid == enteredid){
+        $scope.task.splice(i , 1);
+      }
+    }
+
+ }
+});//controller ends
+   </script>
+  </body>
+</html>

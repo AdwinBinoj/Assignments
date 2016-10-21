@@ -1,0 +1,114 @@
+.clear{
+	clear: both;
+}
+header h1{
+text-align: center;
+font-size: 40px;
+margin: 40px 0px 40px 0px;
+color: #3a3839;
+}
+.add{
+	float: right;
+	color: #07a4f5;
+	padding: 0px 7% 20px 0px;
+	cursor: pointer;
+}
+.input{
+	background: #fff;
+	box-shadow: 10px 10px 100px 30px #000;
+	border-radius: 20px;  
+	top: 100px;
+}
+.input span{
+	font-size: 15px;
+	padding-top: 20px;
+	width: 20%;
+}
+.input section{
+	padding: 1% 0px;
+
+}
+.input input{
+	margin-top: 4%;
+}
+.taskid{
+	width: 80%;
+	line-height: 2%;
+	padding: 1%;
+	border-radius: 5px;
+}
+.taskname{
+	width: 80%;
+	line-height: 2%;
+	padding: 1%;
+	border-radius: 5px;
+	margin-bottom: 5%;
+}
+.taskadding{
+	padding:2% 0px;
+	margin-bottom: 4%;
+}
+.taskadd{
+	font-size: 20px !important;
+	padding: 1.5% 2% !important;
+	margin-left: 20% ;
+	background-color: #07a4f5;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	vertical-align: super;
+}
+table {
+	margin: 0 auto;
+    border-collapse: collapse;
+    width: 90%;
+    text-align: center;
+    color: #3a3839;
+}
+ td {
+    border: 1px solid black;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bolder;
+    vertical-align: middle;
+}
+.remove span{
+	color: #07a4f5;
+	cursor: pointer;
+	font-size: 15px !important;
+}
+.colored{
+	background-color: lightgrey;
+}
+.search{
+  	text-align: center;
+ 	font-size: 20px;
+ 	padding-bottom: 3%;
+ 	}
+  .search input{
+  	font-family: cursive;
+  }
+@media screen and (max-width: 767px) {
+
+.input span{
+	font-size: 13px;
+}
+.taskadd{
+	font-size: 15px !important;
+}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+
+.input span{
+	font-size: 20px;
+}
+.taskadd{
+	font-size: 15px !important;
+}
+header h1{
+font-size: 15px !important;
+margin: 20px 0px 40px 0px !important;
+}
+}
+@media (min-width: 992px) and (max-width: 1199px) {}
+@media screen and (min-width: 1200px) {}

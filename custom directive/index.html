@@ -1,0 +1,58 @@
+
+<!DOCTYPE HTML >
+<html>
+
+<head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-B">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/reset.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+
+<body ng-app="myapp">
+<section class="wrapper col-xs-12" ng-controller="MyCtrl1">
+<header class="col-xs-12">
+    <h1>My ToDo Application</h1>
+    <p class="add" ng-show="addbutton" ng-click="addoption()">Add</p>
+    <p class="clear"></p>
+</header>
+<section class="input col-xs-12" ng-show="addinginput">
+  <section class="col-xs-12">
+    <span class="col-xs-2">Task id:</span>
+    <input type="textbox" name="taskid" class="taskid col-xs-9" ng-model="newtaskid">
+  </section>
+  <section class="col-xs-12" >
+    <span class="col-xs-2">Task Name :</span>
+    <input type="textbox" name="taskname" class="taskname col-xs-9" ng-model="newtaskname">
+  </section>
+  <section class="taskadding">
+    <span class="taskadd" ng-click="addtask()">ADD</span>
+    <span class="taskadd" ng-click="canceloption()">CANCEL</span>
+  </section>
+</section>
+   <table>
+       <tr>
+           <td>#</td>
+           <td>Task Id</td>
+           <td>Task name</td>
+           <td>Mark Completed</td>
+           <td>Remove Task</td>
+       </tr> 
+
+       <tr adwin-binoj="x in task" ng-class="{colored:checkbox}">
+           <td>{{$index+1}}</td>
+           <td>{{x.taskid}}</td>
+           <td>{{x.taskname}}</td>
+           <td><input type="checkbox" name={{x.taskname}} ng-model="checkbox"></td>
+           <td  class="remove"><span ng-click="remove(x.taskid)">REMOVE</span></td>
+           </tr>          
+   </table>
+   </section>
+   <script src="lib/angular/angular.min.js"></script>
+   <script src="script/app.js"></script>
+    <script src="script/directive.js"></script>
+   </script>
+  </body>
+</html>

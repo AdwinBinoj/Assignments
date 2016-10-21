@@ -1,0 +1,12 @@
+{
+	"headline":"My ToDO application",
+	"taskid1":"Task ID",
+	"taskname1":"Task Name",
+	"markc1":"Mark Completed",
+	"rmtask":"Remove Task",
+	"remove1":"Remove",
+	"add1":"Add",
+	"cancel1":"Cancel",
+	"search" :"Search :",
+	"lan":"Language :"
+}
